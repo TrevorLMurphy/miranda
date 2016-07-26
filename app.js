@@ -1,7 +1,7 @@
 var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
-var brain = require('brain');
+var brain = require('./brain');
 var app = express();
 
 app.use(bodyParser.urlencoded({
