@@ -6,8 +6,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/webhook', function(req, res) {
-    if (req.query(['hub.verify_token'] === 'secret-token')) {
+    if (req.query(['hub.verify_token'] === 'miranda_verify')) {
         res.send(req.query['hub.challenge']);
+        console.log(req.query);
     } else {
         res.send('Error, wrong validation token');
     }
