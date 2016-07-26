@@ -1,0 +1,22 @@
+{
+  "name": "miranda",
+  "version": "1.0.0",
+  "description": "Miranda bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TrevorLMurphy/miranda.git"
+  },
+  "author": "Trevor Murphy",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/TrevorLMurphy/miranda/issues"
+  },
+  "homepage": "https://github.com/TrevorLMurphy/miranda#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
