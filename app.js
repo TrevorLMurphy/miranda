@@ -1,7 +1,10 @@
 var express = require('express');
-var app = express();
 var request = require('request');
+var bodyParser = require('body-parser');
+var app = express();
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.listen(process.env.PORT || 5000);
 
 app.get('/', function(req, res) {
@@ -114,9 +117,9 @@ function callSendAPI(messageData) {
 			console.log("Successfully sent generic message with id %s to" +
 				" recipient % s", messageId, recipientId);
 		} else {
-            console.error("Unable to send message.");
-            console.error(response);
-            console.error(error);
-        }
+			console.error("Unable to send message.");
+			console.error(response);
+			console.error(error);
+		}
 	});
 }
