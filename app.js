@@ -30,7 +30,7 @@ app.post('/webhook', function(req, res) {
 	for (i = 0; i < events.length; i++) {
 		var event = events[i];
 		if (event.message && event.message.text) {
-            greeting = brain.think(event.message.text);
+            var greeting = brain.think(event.message.text);
             sendMessage(event.sender.id, greeting);
 		}
 	}
